@@ -2,9 +2,29 @@
     <div class="header-content">
         <div class="header-content-inner">
             <h1>HaxSpot</h1>
-            <hr>
-            <p>Turn your driveway into cash</p>
-            <a href="#posts" class="btn btn-primary btn-xl page-scroll">Learn More</a>
+            <div class="row">
+               <div class="col-lg-6 col-sm-6 col-sm-offset-3 col-lg-offset-3 text-center">
+                  <p>
+                     Turn your driveway into cash
+                  </p>
+                  <a href="#posts" class="btn btn-primary btn-xl page-scroll">Learn More</a>
+                  <hr>
+                  <form action="//formspree.io/support@haxspot.com" method="POST" class="">
+                     <label for="exampleInputEmail1">Want to know more? Shoot us message and we'll get in touch
+                        <br />
+                        <small>(Don't worry, we won't spam you)</small>
+                     </label>
+                     <br />
+                     <div class="form-group">
+                        <input type="email" name="_replyto" class="form-control" id="exampleInputEmail1" placeholder="Your Email">
+                        <textarea name="name" class="form-control" rows="4" cols="100" placeholder="Your Message"></textarea>
+                     </div>
+                     <button type="submit" class="btn btn-success">Submit</button>
+                     <input type="hidden" name="_next" value="/" />
+                     <input type="text" name="_gotcha" style="display:none" />
+                  </form>
+               </div>
+            </div>
         </div>
     </div>
 </header>
