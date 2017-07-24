@@ -35,16 +35,24 @@ h4,
 h5,
 h6 {
     @include sans-serif-font;
+    color: $theme-primary;
 }
 
 p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .bg-primary {
     background-color: $theme-primary;
+    h1, h2, h3, h4, h5, p {
+        color: white;
+    }
+    a {
+        color: white;
+    }
 }
 
 .bg-dark {
@@ -116,14 +124,14 @@ aside {
             //color: rgba(white, .7);
             &:hover,
             &:focus {
-                color: white;
+                color: lighten($theme-primary, 30%);
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(white, .7);
+            color: $theme-primary;
             &:hover {
-                color: white;
+                color: lighten($theme-primary, 30%);
             }
         }
         &.affix {
@@ -139,7 +147,7 @@ aside {
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: $theme-dark;
+                color: $theme-primary;
                 &:hover {
                     color: $theme-primary;
                 }
@@ -188,7 +196,7 @@ header {
         }
     }
     @media (min-width: 768px) {
-        min-height: 100%;
+        min-height: 50%;
         .header-content {
             position: absolute;
             top: 50%;
@@ -302,12 +310,12 @@ header {
 
 // Button Styles
 .btn-default {
-    @include button-variant($theme-dark, white, white);
+    @include button-variant($theme-primary, white, white);
 }
 
 .btn-primary {
     //@include button-variant(white, $theme-primary, $theme-primary);
-    @include button-variant(white, $theme-dark, $theme-primary);
+    @include button-variant($theme-primary, $theme-dark, $theme-primary);
 }
 
 .btn {
@@ -324,7 +332,7 @@ header {
 
 // Contact
 #contact .fa {
-    color: $theme-dark;
+    color: $theme-primary;
     font-size: 4em;
 }
 
@@ -356,3 +364,6 @@ body {
     -webkit-tap-highlight-color: $theme-dark;
 }
 
+.list-group-item {
+    border: none;
+}
