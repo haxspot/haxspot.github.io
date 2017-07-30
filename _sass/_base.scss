@@ -102,18 +102,37 @@ aside {
                 font-size: 13px;
                 color: $theme-dark;
                 &:hover {
-                    color: $theme-primary;
+                    color: lighten($theme-dark, 30%);
                 }
             }
             &.active {
                 > a,
                 > a:focus {
-                    color: $theme-primary !important;
+                    color: $theme-dark !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
                     }
                 }
+            }
+        }
+    }
+    &.affix {
+        background-color: $theme-primary;
+        border-color: rgba($theme-dark, .5);
+        .navbar-header .navbar-brand {
+            color: $theme-dark;
+            //font-size: 14px;
+            &:hover,
+            &:focus {
+                color: darken($theme-dark, 10%);
+            }
+        }
+        .nav > li > a,
+        .nav > li > a:focus {
+            color: darken($theme-dark, 20%);
+            &:hover {
+                color: lighten($theme-dark, 30%);
             }
         }
     }
@@ -135,21 +154,21 @@ aside {
             }
         }
         &.affix {
-            background-color: white;
+            background-color: $theme-primary;
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
-                color: $theme-primary;
-                font-size: 14px;
+                color: $theme-dark;
+                //font-size: 14px;
                 &:hover,
                 &:focus {
-                    color: darken($theme-primary, 10%);
+                    color: darken($theme-dark, 10%);
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: $theme-primary;
+                color: darken($theme-dark, 20%);
                 &:hover {
-                    color: $theme-primary;
+                    color: lighten($theme-dark, 30%);
                 }
             }
         }
@@ -196,7 +215,7 @@ header {
         }
     }
     @media (min-width: 768px) {
-        min-height: 50%;
+        min-height: 60%;
         .header-content {
             position: absolute;
             top: 50%;

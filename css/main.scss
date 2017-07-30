@@ -76,3 +76,32 @@ $theme-dark: #FDD835;
 .find-parking {
 	margin-top: 36px;
 }
+
+.stay-up-to-date {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.stay-up-to-date p {
+	margin-bottom: 5px;
+}
+
+.navbar-toggle {
+	-webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 767px) {
+	.navbar-collapse.in, .navbar-collapse.collapsing{
+		background-color: #263238;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.navbar-default .navbar-toggle .icon-bar {
+	    background-color: #fdd835;
+	}
+
+	.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	    background-color: #263238;
+	    border-color: #263238;
+	}
+}
